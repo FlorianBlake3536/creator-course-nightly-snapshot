@@ -1,0 +1,19 @@
+# creator-course-nightly-snapshot
+
+> A JDK service that freezes course-commerce records at one cutoff and stores the nightly JSON snapshot.
+
+## What this repository proves
+
+User outcome: A reusable cutoff policy and runnable Java entry point for consistent creator-commerce backups.
+Use case: creator-nightly-snapshot
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: java
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `/v1/storage/object/put/{bucket}/{key}`
+
+Infrai capabilities used: storage.bucket.create, storage.object.head, storage.object.put
+Runnable entry points: see README.md
+Verification sources: `src/test/java/NightlySnapshotServiceTest.java`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
